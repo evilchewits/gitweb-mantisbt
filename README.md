@@ -12,7 +12,7 @@ This connection was initailly developed for use on [Open CASCADE Technology Coll
 
 To take advantage of this connection you should do 3 steps:
   1. Use naming conventions:
-    - encode issue number in branch name: `git checkout -b CR0012345_v2`, where `CR` - a prefix (CR means "Contribution Request"), `0012345` - issue number in MantisBT, `v2` - suffix. You're free to choose any prefix and suffix - they are configurable.
+    - encode issue number in branch name: `git checkout -b CR0012345_v2`, where `CR` - a prefix (CR means "Contribution Request"), `0012345` - issue number in MantisBT, `v2` - suffix. A RegExp pattern for branch name is configurable.
     - include issue number in the first line of a commit message, e.g. `git commit -m "0012345: Issue Summary"`.
     
   2. Tune your configuration (bugtrackerURL, etc.) editing *bugtrackerConnection_config* variable in *bugtrackerConnection.js* file and put the file to your GitWeb directory. Plug it, e.g. by editing GitWeb *header.html* file as follows:
@@ -33,5 +33,5 @@ Please note that the described approach allows to fetch issue subject and status
 
 ## Further development
 
-These scripts will be re-developed to use [CORS](https://en.wikipedia.org/wiki/Cross-origin_resource_sharing) instead of [JSONP](https://en.wikipedia.org/wiki/JSONP) due to limitation of the latest, which can use only GET-request with limited length.
+These scripts will be re-developed to use [CORS](https://en.wikipedia.org/wiki/Cross-origin_resource_sharing) instead of [JSONP](https://en.wikipedia.org/wiki/JSONP) due to limitation of the latter, which can use only GET-request with limited length.
 It means also more modularity because allows to incapsulate the script to its own namespace.
