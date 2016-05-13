@@ -26,12 +26,7 @@ That's it!
 ## How it works
 
 When a GitWeb page is loaded, the *bugtrackerConnection.js* script parses an HTML and searches for branch names and commits containing issue numbers.
-This script gathers all the issue numbers and asks a *getBugsInfo.php* on MantisBT side for more information (issue subjects and statuses) in JSONP request.
+This script gathers all the issue numbers and asks the *getBugsInfo.php* on MantisBT side for more information (issue subjects and statuses) in JSONP requests.
 Then the *bugtrackerConnection.js* script updates HTML page properly.
 
 Please note that the described approach allows to fetch issue subject and status anonymously. It does not matter whether an issue is public or private.
-
-## Further development
-
-These scripts will be re-developed to use [CORS](https://en.wikipedia.org/wiki/Cross-origin_resource_sharing) instead of [JSONP](https://en.wikipedia.org/wiki/JSONP) due to limitation of the latter, which can use only GET-request with limited length.
-It means also more modularity because allows to incapsulate the script to its own namespace.
