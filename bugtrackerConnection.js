@@ -1,9 +1,9 @@
 // Settings
 var bugtrackerConnection_config = {
-  repositories: ['occt', 'occt-wok'],                  // A list of repositories. If empty, fetches statuses for all repositories
-  bugtrackerURL: 'http://tracker.dev.opencascade.org', // The link to MantisBT
+  repositories: ['occt', 'occt-wok'],                   // A list of repositories. If empty, fetches statuses for all repositories
+  bugtrackerURL: 'https://tracker.dev.opencascade.org', // The link to MantisBT
   bugtrackerBackend:
-    '/plugins/SubsidiaryServices/php/getBugsInfo.php', // Path to backend script on MantisBT side
+    '/plugins/SubsidiaryServices/php/getBugsInfo.php',  // Path to backend script on MantisBT side
   branchRegExpString: {
     prefix: 'CR',                    // RegExp for branch prefix
     bugId:  '0*([0-9]{1,7})',        // RegExp for issue ID
